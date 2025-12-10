@@ -260,7 +260,7 @@ pretrained_classifier:
   source_term: pretrained_classifier
 ---
 
-# protocol_bioinformatics_amplicon_tourmaline2_Eukarya-18S-V4-Stoeck-Piredda
+# NOAA/AOML Amplicon Sequence Processing Protocol using Tourmaline 2 (Eukarya-18S-V9-Lane-Medlin)
 
 - add sections specific for assay
 - delete general guidance that's not necessary
