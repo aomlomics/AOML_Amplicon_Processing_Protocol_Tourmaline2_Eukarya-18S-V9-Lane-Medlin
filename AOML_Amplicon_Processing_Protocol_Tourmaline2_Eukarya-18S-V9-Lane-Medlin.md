@@ -1,7 +1,7 @@
 ---
 # MIOP terms
 meth_cat: bioinformatics
-project: "NOAA Atlantic Oceanographic and Meteorological Laboratory Omics Program Protocols, https://github.com/aomlomics/protocols"
+project: "NOAA Atlantic Oceanographic and Meteorological Laboratory Omics Program; https://github.com/aomlomics/protocols; https://zenodo.org/communities/aomlomics"
 purpose: taxonomic diversity assessment by targeted gene survey [OBI:0001960]
 analyses: "bioinformatics analysis [MIOP:0000004] | amplicon sequencing assay [OBI:0002767]"
 geographic_location: not applicable
