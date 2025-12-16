@@ -1417,7 +1417,8 @@ A unique identifier for each sequencing run, batch, or sample.
 
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
-| 1.0.0 | 2024-12-06 | Initial release |
+| 1.0.0 | 2025-12-09 | Initial release |
+| 1.0.1 | 2025-12-15 | Updated YAML front matter |
 
 - Version numbers start at 1.0.0 when the protocol is first completed and will increase when changes that impact the outcome of the procedure are made (patches: 1.0.1; minor changes: 1.1.0; major changes: 2.0.0).
 - Release date is the date when a given protocol version was finalised.
