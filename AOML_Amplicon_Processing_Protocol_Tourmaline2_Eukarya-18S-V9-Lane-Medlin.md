@@ -5,10 +5,10 @@ project: "NOAA Atlantic Oceanographic and Meteorological Laboratory Omics Progra
 purpose: taxonomic diversity assessment by targeted gene survey [OBI:0001960]
 analyses: "bioinformatics analysis [MIOP:0000004] | amplicon sequencing assay [OBI:0002767]"
 geographic_location: not applicable
-broad-scale_environmental_context: not applicable (bioinformatics analysis)
-local_environmental_context: not applicable (bioinformatics analysis)
-environmental_medium: not applicable (bioinformatics analysis)
-target: not applicable (bioinformatics analysis)
+broad-scale_environmental_context: not applicable
+local_environmental_context: not applicable
+environmental_medium: not applicable
+target: not applicable
 creator: "Clement Coclet, https://orcid.org/0000-0002-6672-148X | Katherine Silliman, https://orcid.org/0000-0001-5964-3965 | Luke Thompson, https://orcid.org/0000-0002-3911-1280"
 materials_required: Conda or Mamba, QIIME 2 version 2024.10 or later, Snakemake, Python packages biopython, yq, parallel, Muscle v.3.8, and Bowtie 2
 skills_required: proficiency with UNIX command line and amplicon/metabarcoding data analysis
@@ -25,7 +25,7 @@ maturity_level: Pilot or Demonstrated
 # FAIRe terms
 checkls_ver: 1.0.2
 sop_bioinformatics: "https://github.com/aomlomics/tourmaline/tree/develop"
-assay_name: Eukarya-18S-V9-Lane-Medlin (This term could also be placed in the MIOP terms section.)
+assay_name: Eukarya-18S-V9-Lane-Medlin
 trim_method: qiime2-amplicon-2024.10;Cutadapt 4.9
 trim_param: not applicable
 demux_tool: Illumina Bcl2fastq v2.20.0
@@ -106,43 +106,34 @@ qiime2_version: qiime2-amplicon-2024.10
 trimming_threads:
   default: 4
   source_file: config_01_qaqc.yaml
-  source_term: trimming_threads
 maxdiffs:
   default: 20
   source_file: config_01_qaqc.yaml
-  source_term: maxdiffs
 merge_stagger:
   default: --p-allowmergestagger
   source_file: config_01_qaqc.yaml
-  source_term: merge_stagger
 seq_quality_cutoff:
   default: 0.85
   options: [0-1]
   source_file: config_01_qaqc.yaml
-  source_term: seq_quality_cutoff
 fwd_primer:
   default: CCAGCASCYGCGGTAATTC
   source_file: config_01_qaqc.yaml
-  source_term: fwd_primer
 rev_primer:
   default: ACTTTCGTTCTTGATYRATG
   source_file: config_01_qaqc.yaml
-  source_term: rev_primer
 plot_diversity:
   default: True
   options:
     - True
     - False
   source_file: config_02_repseqs.yaml
-  source_term: plot_diversity
 alpha_max_depth:
   default: 500
   source_file: config_02_repseqs.yaml
-  source_term: alpha_max_depth
 core_sampling_depth:
   default: 500
   source_file: config_02_repseqs.yaml
-  source_term: core_sampling_depth
 asv_method:
   default: dada2pe
   options:
@@ -150,35 +141,27 @@ asv_method:
     - dada2se
     - deblur
   source_file: config_02_repseqs.yaml
-  source_term: asv_method
 asv_threads:
   default: 32
   source_file: config_02_repseqs.yaml
-  source_term: asv_threads
 dada2_trunc_len_f:
   default: 240
   source_file: config_02_repseqs.yaml
-  source_term: dada2_trunc_len_f
 dada2pe_trunc_len_r:
   default: 200
   source_file: config_02_repseqs.yaml
-  source_term: dada2pe_trunc_len_r
 dada2_trim_left_f:
   default: 0
   source_file: config_02_repseqs.yaml
-  source_term: dada2_trim_left_f
 dada2pe_trim_left_r:
   default: 0
   source_file: config_02_repseqs.yaml
-  source_term: dada2pe_trim_left_r
 dada2pe_max_ee_r:
   default: 2
   source_file: config_02_repseqs.yaml
-  source_term: dada2pe_max_ee_r
 dada2_trunc_q:
   default: 2
   source_file: config_02_repseqs.yaml
-  source_term: dada2_trunc_q
 dada2_pooling_method:
   default: pseudo
   options:
@@ -186,7 +169,6 @@ dada2_pooling_method:
     - pseudo
     - pooled
   source_file: config_02_repseqs.yaml
-  source_term: dada2_pooling_method
 dada2_chimera_method:
   default: consensus
   options:
@@ -194,76 +176,58 @@ dada2_chimera_method:
     - consensus
     - pooled
   source_file: config_02_repseqs.yaml
-  source_term: dada2_chimera_method
 dada2_min_fold_parent_over_abundance:
   default: 1
   source_file: config_02_repseqs.yaml
-  source_term: dada2_min_fold_parent_over_abundance
 dada2_n_reads_learn:
   default: 1000000
   source_file: config_02_repseqs.yaml
-  source_term: dada2_n_reads_learn
 dada2_hashed_feature_ids:
   default: --p-hashed-feature-ids
   source_file: config_02_repseqs.yaml
-  source_term: dada2_hashed_feature_ids
 to_filter:
   default: False
   options:
     - True
     - False
   source_file: config_02_repseqs.yaml
-  source_term: to_filter
 repseq_min_length:
   default: 0
   source_file: config_02_repseqs.yaml
-  source_term: repseq_min_length
 repseq_max_length:
   default: 450
   source_file: config_02_repseqs.yaml
-  source_term: repseq_max_length
 repseq_min_abundance:
   default: 0
   options: [0-1]
   source_file: config_02_repseqs.yaml
-  source_term: repseq_min_abundance
 repseq_min_prevalence:
   default: 0
   options: [0-1]
   source_file: config_02_repseqs.yaml
-  source_term: repseq_min_prevalence
 repseq_min_frequency:
   default: 0
   source_file: config_02_repseqs.yaml
-  source_term: repseq_min_frequency
 repseq_min_samples:
   default: 0
   source_file: config_02_repseqs.yaml
-  source_term: repseq_min_samples
 taxa_ranks:
   default: kingdom,phylum,class,order,family,genus,species
   source_file: config_03_taxonomy.yaml
-  source_term: taxa_ranks
 collapse_taxalevel:
   default: 7
   options: [0-7]
   source_file: config_03_taxonomy.yaml
-  source_term: collapse_taxalevel
 classify_threads:
   default: 40
   source_file: config_03_taxonomy.yaml
-  source_term: classify_threads
 pretrained_classifier:
   default: rcrux_18Sv4_NA_removed_uniq-classifier.qza
   options: pr2_v5.0.0_18Sv4_uniq-classifier.qza
   source_file: config_03_taxonomy.yaml
-  source_term: pretrained_classifier
 ---
 
 # NOAA/AOML Amplicon Sequence Processing Protocol using Tourmaline 2 (Eukarya-18S-V9-Lane-Medlin)
-
-- add sections specific for assay
-- delete general guidance that's not necessary
 
 # 1-BACKGROUND
 
