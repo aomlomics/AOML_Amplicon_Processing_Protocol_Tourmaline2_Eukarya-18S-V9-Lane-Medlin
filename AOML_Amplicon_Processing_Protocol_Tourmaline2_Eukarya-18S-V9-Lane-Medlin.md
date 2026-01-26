@@ -8,7 +8,7 @@ geographic_location: not applicable
 broad-scale_environmental_context: not applicable
 local_environmental_context: not applicable
 environmental_medium: not applicable
-target: not applicable
+target: "18S Ribosomal RNA [NCIT:C48172]"
 creator: "Clement Coclet, https://orcid.org/0000-0002-6672-148X | Katherine Silliman, https://orcid.org/0000-0001-5964-3965 | Luke Thompson, https://orcid.org/0000-0002-3911-1280"
 materials_required: Conda or Mamba, QIIME 2 version 2024.10 or later, Snakemake, Python packages biopython, yq, parallel, Muscle v.3.8, and Bowtie 2
 skills_required: proficiency with UNIX command line and amplicon/metabarcoding data analysis
