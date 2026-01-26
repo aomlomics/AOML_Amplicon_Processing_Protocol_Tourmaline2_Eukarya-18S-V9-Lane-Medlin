@@ -26,6 +26,8 @@ maturity_level: Pilot or Demonstrated
 checkls_ver: 1.0.2
 sop_bioinformatics: "https://github.com/aomlomics/tourmaline/tree/develop;https://doi.org/10.5281/zenodo.17582375"
 assay_name: Eukarya-18S-V9-Lane-Medlin
+target_gene: 18S rRNA (SSU eukaryote)
+target_subfragment: V9
 trim_method: qiime2-amplicon-2024.10;Cutadapt 4.9
 trim_param: not applicable
 demux_tool: Illumina Bcl2fastq v2.20.0
