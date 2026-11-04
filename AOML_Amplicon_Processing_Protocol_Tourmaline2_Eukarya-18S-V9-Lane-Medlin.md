@@ -18,7 +18,7 @@ language: en
 issued: 2025-09-30
 audience: metabarcoding data analysts
 publisher: NOAA Atlantic Oceanographic and Meteorological Laboratory
-hasVersion: 1.0.0
+hasVersion: 1.0.2
 license: CC0
 maturity_level: Pilot or Demonstrated
 
